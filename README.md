@@ -1,4 +1,4 @@
-trackr
-======
+Lab 5
+====
 
-Reworking of the trackr app for COGS 120
+Lab 5: Putting it together

@@ -1,0 +1,164 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>TR&#916;CK</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"/>
+	<link href="css/index.css" rel="stylesheet" >
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+
+	<link href="css/custom.css" rel="stylesheet">
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="routes/signup.js"></script>       
+</head>
+
+<body>
+<!--DIARY-->
+<div data-role="page" id="diary">
+
+	<!--panel-->
+	<div data-role="panel" id="mypanel" data-position="right" data-display="reveal" data-theme="b">
+		<ul data-role="listview" data-theme="b">
+    		<li data-icon="home"><a href="./home">Home</a></li>
+   			<li data-icon="clock"><a href="./reminders">Reminders</a></li>
+    		<li data-icon="delete"><a href="#signoutprompt">Sign Out</a></li>
+		</ul></br>
+	</div><!-- /panel -->
+
+	<div data-role="header" data-theme="b" data-backbtn="false">
+		<a href="./home" data-icon="carat-l" data-iconpos="notext" class="ui-btn-left" data-ajax="false" data-direction="reverse"></a>
+		
+		<h1>Diary 1</h1>
+		
+		<a href="#mypanel" data-icon="bars" data-iconpos="notext" class="ui-btn-right" data-backbtn="false"></a>
+
+		<div data-role="navbar" data-theme="a">
+			<ul>
+				<li><a href="#" data-role="button" class="ui-btn-active ui-state-persist"> Diary View </a></li>
+				<li><a href="./compare" data-role="button" data-transition="none"> Comparison View</a></li>
+			</ul>
+		</div><!-- /header -->
+	</div>
+	
+	<div data-role="content" data-theme="c">	
+		<h4>DIARY VIEW</h4>
+
+		<a href="./addphoto" data-mini="true" id="newPhotoButton" class="ui-btn ui-icon-plus ui-btn-icon-top">Add New Photos</a>
+
+			<h5>mm/dd/yyyy</h5>
+			<div class="ui-grid-b" id="pics">
+			    <div class="ui-block-a">
+		        	<a href="http://i.imgur.com/viqNv8h.jpg" class="swipebox">
+		        		<img alt="alt..." src="http://i.imgur.com/viqNv8h.jpg" />
+		        	</a>
+			    </div>
+
+			    <div class="ui-block-b">
+		        	<a href="http://i.imgur.com/LR9th93.gif" class="swipebox">
+		        		<img alt="alt..." src="http://i.imgur.com/LR9th93.gif" />
+		        	</a>
+			    </div>
+	   
+	   		    <div class="ui-block-c">
+		        	<a href="http://i.imgur.com/J56QTFL.jpg" class="swipebox">
+		        		<img alt="alt..." src="http://i.imgur.com/J56QTFL.jpg" />	
+	        		</a>
+		    	</div>
+			</div>
+			<!--Collapsable-->
+			<div data-role="collapsible" data-theme="b" class="addnotes">
+    			<h4>Notes</h4>
+			<!--	<label for="textarea">Textarea:</label> -->
+				<div data-role="container" class="notescontain">
+					<form>
+						<!--TEXTBOX-->
+						<textarea cols="20" rows="8" name="textarea" id="textarea" class="enternotes" placeholder="Tap to add notes"></textarea>
+
+						<div class="ui-grid-a">
+							<div class="ui-block-a">
+								<select name="select-choice-a" id="select-choice-a" data-native-menu="false" >
+								    <option>Active Spots</option>
+								    <option value="0">No Active Spots</option>
+								    <option value="1">1 Active Spot</option>
+								    <option value="2">2 Active Spots</option>
+								    <option value="3">3 Active Spots</option>
+								    <option value="4">4 Active Spots</option>
+								    <option value="5+">5-10 Active Spots</option>
+								    <option value="10+">10+  Active Spots</option>
+								</select>
+							</div>
+							<div class="ui-block-b">
+								<select name="select-products" id="select-products" multiple="multiple" data-native-menu="false" >
+								    <option>Products Used</option>
+								    <optgroup label="Regularly Used Products">
+								    	<option value="OCM">Oil Cleansing</option>
+								        <option value="Cleanser">Cleanser</option>
+								        <option value="Toner">Toner</option>
+								        <option value="BHA">BHA</option>
+								        <option value="AHA">AHA</option>
+								        <option value="Spot Treatment">Spot Treatment</option>
+								        <option value="moisturizer">Moisturizer</option>
+								    </optgroup>
+								    <optgroup label="Occasional Products">
+								        <option value="clay">Clay Mask</option>
+								        <option value="honey">Honey Mask</option>
+								        <option value="ground">Mint Julep Mask</option>
+								    </optgroup>
+								    <a href="#" data-rel="back" class="ui-btn">Save</a>
+								</select>
+							</div>
+						</div>
+
+						<a data-role="button" data-theme="b" data-icon="none" data-iconpos="right" id="button" onclick="swapButton()">Submit</a>
+					</form>				
+				</div>
+			</div>
+		</div>
+
+	<div data-role="footer" data-position="fixed" data-theme="b">
+
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!--SIGNOUT PROMPT-->
+<div data-role="page" id="signoutprompt">
+	<div data-role="header" data-theme="b">
+		<h3>Sign Out?</h3>
+	</div>
+	<div data-role="content" data-theme="c">
+		Are you sure you want to sign out?
+			<a href="./" data-role="button" data-theme="b">Yes, sign me out</a>
+			<a data-rel="back" data-role="button" data-theme="c">Cancel</a>
+	</div>
+</div>
+<!--/SIGNOUT PROMPT-->
+
+
+
+<!--	<h1>My HCI Friends</h1>
+	
+	{{#each friends}}
+	<div class="friend">
+		<img src={{imageURL}} alt="friend" class="img-responsive">
+		<a href="#" class="nameListener"><h3>{{name}}</h3></a>
+		<p>{{description}}</p>
+	</div>
+	{{/each}}
+
+<!--	<form id="addFriendForm" role="form" method="get" action="/add">
+		<h3>Add a friend</h3>
+	    <div class="form-group">
+	      <label for="name">Name:</label>
+	      <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+	    </div>
+	    <div class="form-group">
+	      <label for="description">Description:</label>
+	      <input type="text" class="form-control" id="description" placeholder="Description" name="description">
+	    </div>
+	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
+	</form>
+-->
+</body>
+</html>

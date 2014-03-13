@@ -14,12 +14,17 @@ function initializePage() {
 }
 
 jQuery(function($) {
-	$(".swipebox").swipebox();
+	if($(".swipebox").length > 0) {
+	  $('.swipebox').swipebox();
+	}
 });
 
 
-$(window).load(function(){
-  $(".twentytwenty-container").twentytwenty();
+$(document).ready(function(){
+  if($(".twentytwenty-container").length > 0) {
+    $('.twentytwenty-container').twentytwenty();
+  }
+  
 });
 
 

@@ -19,6 +19,7 @@ var compareleft = require('./routes/compareleft')
 var compareright = require('./routes/compareright')
 var reminders = require('./routes/reminders')
 var adddiary = require('./routes/adddiary')
+var addentry = require('./routes/addentry')
 // Example route
 // var user = require('./routes/user');
 
@@ -51,6 +52,7 @@ app.get('/signup', signup.view);
 app.get('/home', home.view);
 app.get('/diary', diary.view);
 app.get('/addphoto', addphoto.view);
+app.get('/addentry', addentry.addEntry);
 app.get('/compare', compare.view);
 app.get('/compareleft', compareleft.view);
 app.get('/compareright', compareright.view);

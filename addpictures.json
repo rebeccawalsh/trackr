@@ -1,10 +1,12 @@
 {
-	"diaries": [
+	"entries": [
 		{
-			"diaryname": "Clearasil Progress"
+			"date": "2/4/2014",
+			"notes": "Nothing Happened"
 		},
 		{
-			"diaryname": "Neutrogena Progress"
+			"date": "2/8/2014",
+			"notes": "Starting to see improvement!"
 		}
 	]
 

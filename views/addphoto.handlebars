@@ -44,17 +44,23 @@
 		<h4>Right Cheek</h4>
  			<input type="file" accept="image/*">
 		</form>
-			<a href="./diary" data-role="button" data-theme="b" data-icon="none" data-iconpos="right" id="button" onclick="swapButton()">Upload</a>
+		<!--<a href="./diary" data-role="button" data-theme="b" data-icon="none" data-iconpos="right" id="button" onclick="swapButton()">Upload</a>-->
+		 <form id="PhotoForm" role="form" method="get" action="/addentry" >
+ 			<div style="padding:10px 20px;">
+ 				<h4>Entry Notes</h4><input type="text" id="diarynotes" name="diarynotes" placeholder="e.g. 'Today I saw improvements'">
+ 				<input type="submit" id="submitBtn" class="btn btn-default" value="Create Entry" ></input>
+ 			</div>
+ 			</form>
 
 	</div>
 
-	<div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
+	<!--div data-role="footer" data-id="fool" data-position="fixed" data-theme="b">
 		<div data-role="navbar" data-theme="a" data-iconpos="left">
 			<ul>
 				<li><a href="./diary" class="ui-btn-active ui-state-persist" data-ajax="none" data-direction="reverse" data-icon="carat-d">Done</a></li>
 			</ul>
 		</div> 
-	</div><!-- /footer -->
+	</div--><!-- /footer -->
 </div>
 
 

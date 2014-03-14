@@ -10,5 +10,5 @@ exports.addDiary = function(req, res) {
 	console.log(jsonObject);
 	
 	data["diaries"].push(jsonObject);
-	
+	res.render('home', data);
 }

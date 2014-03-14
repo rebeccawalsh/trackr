@@ -46,8 +46,8 @@
 		<h4>DIARY VIEW</h4>
 
 		<a href="./addphoto" data-mini="true" id="newPhotoButton" class="ui-btn ui-icon-plus ui-btn-icon-top">Add New Photos</a>
-
-			<h5>mm/dd/yyyy</h5>
+		{{#each entries}}
+			<h5>{{date}}</h5>
 			<div class="ui-grid-b" id="pics">
 			    <div class="ui-block-a">
 		        	<a href="http://i.imgur.com/viqNv8h.jpg" class="swipebox">
@@ -67,6 +67,7 @@
 	        		</a>
 		    	</div>
 			</div>
+
 			<!--Collapsable-->
 			<div data-role="collapsible" data-theme="b" class="addnotes">
     			<h4>Notes</h4>
@@ -74,7 +75,7 @@
 				<div data-role="container" class="notescontain">
 					<form>
 						<!--TEXTBOX-->
-						<textarea cols="20" rows="8" name="textarea" id="textarea" class="enternotes" placeholder="Tap to add notes"></textarea>
+						<textarea cols="20" rows="8" name="textarea" id="textarea" class="enternotes" placeholder="Tap to add notes">{{notes}}</textarea>
 
 						<div class="ui-grid-a">
 							<div class="ui-block-a">
@@ -115,8 +116,9 @@
 					</form>				
 				</div>
 			</div>
+			{{/each}}
 		</div>
-
+		
 	<div data-role="footer" data-position="fixed" data-theme="b">
 
 	</div><!-- /footer -->
